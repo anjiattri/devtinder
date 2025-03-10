@@ -5,3 +5,12 @@
 - Install tailwind css
 - Install daisy UI
 - Add navbar to App component
+- Create a separate navbar file
+- Install react-router-dom
+- Setup routes
+- create a login page
+
+Body
+Navbar
+Router=/ =>Feed
+Router=login =>Feed
