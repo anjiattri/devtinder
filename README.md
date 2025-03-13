@@ -11,7 +11,10 @@
 - create a login page
 - Install axios
 - handle login api
-- Install redux toolkit
+- Install redux toolkit, react-redux
+- Create a store
+- add a provider for redux on app
+- add reducer to store
 
 Body
 Navbar
