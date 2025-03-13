@@ -11,6 +11,7 @@
 - create a login page
 - Install axios
 - handle login api
+- Install redux toolkit
 
 Body
 Navbar

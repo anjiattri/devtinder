@@ -13,7 +13,7 @@ const Login = () => {
           emailID,
           password,
         },
-        { withCredentials: true }
+        { withCredentials: true } //To set cookie in browser for token
       );
       console.log(response);
     } catch (error) {
