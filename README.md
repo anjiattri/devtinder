@@ -9,6 +9,8 @@
 - Install react-router-dom
 - Setup routes
 - create a login page
+- Install axios
+- handle login api
 
 Body
 Navbar
