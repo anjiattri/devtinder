@@ -15,6 +15,7 @@
 - Create a store
 - add a provider for redux on app
 - add reducer to store
+- login user and go to feed page
 
 Body
 Navbar

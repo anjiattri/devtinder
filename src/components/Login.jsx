@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import { userdata } from "../utils/dummy";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../utils/constants";
 
 const Login = () => {
   const [emailID, setEmailID] = useState("attri2707@gmail.com");
@@ -13,7 +14,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/login",
+        `${BASE_URL}login`,
         {
           emailID,
           password,
