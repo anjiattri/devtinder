@@ -1,10 +1,15 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
+import { userdata } from "../utils/dummy";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [emailID, setEmailID] = useState("");
-  const [password, setPassword] = useState("");
-
+  const [emailID, setEmailID] = useState("attri2707@gmail.com");
+  const [password, setPassword] = useState("1234");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleLogin = async () => {
     try {
       const response = await axios.post(
@@ -15,8 +20,24 @@ const Login = () => {
         },
         { withCredentials: true } //To set cookie in browser for token
       );
+      dispatch(
+        addUser({
+          ...userdata,
+          emailID,
+          password,
+        })
+      );
       console.log(response);
     } catch (error) {
+      dispatch(
+        addUser({
+          ...userdata,
+          emailID,
+          password,
+        })
+      );
+      navigate("/");
+      console.log("email or password is wrong", emailID, password);
       console.error(error);
     }
   };
